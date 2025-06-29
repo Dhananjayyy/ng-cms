@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const contentDir = path.join(__dirname, '../src/content/blog');
-const outputDir = path.join(__dirname, '../src/assets/content');
+const outputDir = path.join(__dirname, '../src/assets');
 
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });

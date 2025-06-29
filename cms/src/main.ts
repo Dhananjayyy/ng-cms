@@ -8,6 +8,7 @@ declare var netlifyIdentity: any;
 
 bootstrapApplication(App, appConfig)
   .then(() => {
+    
     // Only run on browser side (not during SSR)
     if (typeof window !== 'undefined' && typeof netlifyIdentity !== 'undefined') {
       netlifyIdentity.on('init', (user: any) => {
