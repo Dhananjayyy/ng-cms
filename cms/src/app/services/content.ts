@@ -17,10 +17,10 @@ export class ContentService {
   private http = inject(HttpClient);
 
   getBlogPosts(): Observable<BlogPost[]> {
-    return this.http.get<BlogPost[]>('/api/blog-posts');
+    return this.http.get<BlogPost[]>('/assets/blog-posts.json');
   }
 
   getBlogPost(slug: string): Observable<BlogPost> {
-    return this.http.get<BlogPost>(`/api/blog-posts/${slug}`);
+    return this.http.get<BlogPost>(`/assets/blog-posts/${slug}`);
   }
 }
