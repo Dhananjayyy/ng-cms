@@ -1,5 +1,12 @@
 [
   {
+    "title": "Test 2",
+    "date": "2025-08-06T18:03:40.654Z",
+    "thumbnail": "/uploads/chatgpt-image-aug-6-2025-09_23_37-pm.png",
+    "body": "Test 2",
+    "slug": "2025-08-06-test-2"
+  },
+  {
     "title": "My First Blog Post",
     "date": "2025-06-26",
     "thumbnail": "/uploads/test.png",

@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #ffffff;
+  background: linear-gradient(to bottom, #f7931e 0%, #00a651 100%);
   color: white;
   min-height: 150px;
 }
@@ -32,6 +32,7 @@
 .sidenav-title {
   margin: 10px 0 0 0;
   font-weight: 500;
+  color: white;
 }
 
 .nav-logo {
@@ -43,6 +44,8 @@
   position: sticky;
   top: 0;
   z-index: 2;
+  background-color: white;
+  color: #333;
 }
 
 .spacer {
@@ -61,21 +64,25 @@
   padding: 0 12px;
   height: 48px;
   border-radius: 4px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  color: #333;
 }
 
 .desktop-nav a mat-icon {
   margin-right: 8px;
+  color: #f7931e;
 }
 
 .desktop-nav a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 166, 81, 0.1);
 }
 
 .navbar {
   display: flex;
   align-items: center;
   padding: 0 16px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .brand-logo {
@@ -83,6 +90,7 @@
   font-weight: 500;
   letter-spacing: 0.5px;
   margin-left: 8px;
+  color: #00a651;
 }
 
 .menu-button {
@@ -91,17 +99,18 @@
 
 .nav-icon {
   margin-right: 16px;
-  color: #5c6bc0;
+  color: #f7931e;
 }
 
 .active-link {
-  background-color: rgba(63, 81, 181, 0.1);
-  color: #3f51b5;
+  background-color: rgba(0, 166, 81, 0.1);
+  color: #00a651;
   font-weight: 500;
 }
 
 .active-desktop-link {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(0, 166, 81, 0.15);
+  color: #00a651 !important;
   font-weight: 500;
 }
 
@@ -113,6 +122,22 @@ mat-nav-list a.mat-list-item {
 }
 
 mat-nav-list a.mat-list-item:hover {
-  background-color: rgba(63, 81, 181, 0.05);
+  background-color: rgba(247, 147, 30, 0.1);
+}
+
+button[mat-icon-button] {
+  color: #f7931e;
+}
+
+::ng-deep .mat-menu-item .mat-icon {
+  color: #00a651;
+}
+
+.desktop-nav a:nth-child(odd) mat-icon {
+  color: #f7931e;
+}
+
+.desktop-nav a:nth-child(even) mat-icon {
+  color: #00a651;
 }
 

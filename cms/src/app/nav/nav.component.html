@@ -4,7 +4,8 @@
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="false">
     <div class="sidenav-header">
-      <img src="assets/logo.png" alt="Logo" class="nav-logo" *ngIf="false">
+      <!-- Updated to show the logo -->
+      <img src="assets/logo.png" alt="Logo" class="nav-logo">
       <h2 class="mat-h2 sidenav-title">Pradip's Home</h2>
     </div>
     <mat-divider></mat-divider>
@@ -28,7 +29,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar  class="navbar ">
+    <mat-toolbar class="navbar">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -38,7 +39,10 @@
         class="menu-button">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span class="brand-logo">Pradip's Home</span>
+      <span class="brand-logo">
+        <img src="assets/logo.png" alt="Logo" height="32" style="vertical-align: middle; margin-right: 8px;">
+        Pradip's Home
+      </span>
       <span class="spacer"></span>
       
       <!-- Desktop Navigation -->
