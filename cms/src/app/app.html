@@ -1,69 +1,36 @@
-<mat-toolbar color="primary">
-  <span>{{ title }}</span>
-  <span class="spacer"></span>
-  <button mat-button routerLink="/">Home</button>
-  <button mat-button routerLink="/about">Pops Chemicals</button>
-  <button mat-button routerLink="/blog">Stockholm Convention</button>
-  <button mat-button routerLink="/contact">Contact Me</button>
-  <button mat-icon-button [matMenuTriggerFor]="menu">
-    <mat-icon>more_vert</mat-icon>
-  </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>
-      <mat-icon>account_circle</mat-icon>
-      <span>Profile</span>
-    </button>
-    <button mat-menu-item>
-      <mat-icon>settings</mat-icon>
-      <span>Settings</span>
-    </button>
-  </mat-menu>
-</mat-toolbar>
+<app-nav>
+  <main class="main-content">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to My CMS</h1>
+        <app-home></app-home>
+        <p>A modern content management system built with Angular and Material Design</p>
+        <button mat-raised-button color="accent">Get Started</button>
+      </div>
+    </section>
+<!-- new card -->
+    <section class="featured-card" *ngIf="blogPosts && blogPosts.length > 0">
+      <h2>Latest Blog Posts</h2>
+      <div class="post-grid">
+        <card *ngFor="let post of blogPosts" [post]="post"></card>
+      </div>
+    </section>
 
-<main class="main-content">
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Welcome to My CMS</h1>
-      <app-home></app-home>
-      <p>A modern content management system built with Angular and Material Design</p>
-      <button mat-raised-button color="accent">Get Started</button>
-    </div>
-  </section>
-
-  <section class="latest-posts" *ngIf="blogPosts && blogPosts.length > 0">
-    <h2>Latest Blog Posts</h2>
-    <div class="post-grid">
-      <mat-card class="post-card" *ngFor="let post of blogPosts">
-        <mat-card-header>
-          <mat-card-title>{{ post.title }}</mat-card-title>
-          <mat-card-subtitle>{{ post.date | date: 'longDate' }}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image [src]="post.thumbnail" [alt]="post.title" *ngIf="post.thumbnail">
+    <section class="no-posts" *ngIf="!blogPosts || blogPosts.length === 0">
+      <mat-card>
         <mat-card-content>
-          <p>{{ post.body.length > 150 ? (post.body.substring(0, 150) + '...') : post.body }}</p>
+          <div class="no-posts-content">
+            <mat-icon>article</mat-icon>
+            <h3>No blog posts found</h3>
+            <p>Check back later for new content!</p>
+          </div>
         </mat-card-content>
-        <mat-card-actions>
-          <button mat-button color="primary" [routerLink]="'/blog/' + post.slug">READ MORE</button>
-          <button mat-icon-button>
-            <mat-icon>share</mat-icon>
-          </button>
-        </mat-card-actions>
       </mat-card>
-    </div>
-  </section>
-
-  <section class="no-posts" *ngIf="!blogPosts || blogPosts.length === 0">
-    <mat-card>
-      <mat-card-content>
-        <div class="no-posts-content">
-          <mat-icon>article</mat-icon>
-          <h3>No blog posts found</h3>
-          <p>Check back later for new content!</p>
-        </div>
-      </mat-card-content>
-    </mat-card>
-  </section>
-  
-</main>
-
+    </section>
+    
+    <router-outlet></router-outlet>
+  </main>
+</app-nav>
+          
 <router-outlet></router-outlet>
+   

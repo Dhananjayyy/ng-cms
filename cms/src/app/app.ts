@@ -9,16 +9,18 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { Home } from "./home/home";
+import { NavComponent } from "./nav/nav.component";
+import { Card } from "./components/card/card";
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterModule, CommonModule, MatButtonModule, MatToolbarModule, MatIconModule, MatMenuModule, MatCardModule, MatChipsModule, Home],
+  imports: [RouterOutlet, RouterModule, CommonModule, MatButtonModule, MatToolbarModule, MatIconModule, MatMenuModule, MatCardModule, MatChipsModule, Home, NavComponent, Card],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App implements OnInit {
-  protected title = 'My CMS';
+  protected title = `Pradip's Home`;
   blogPosts: BlogPost[] = [];
   private contentService = inject(ContentService);
 
