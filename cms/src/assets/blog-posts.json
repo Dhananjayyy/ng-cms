@@ -1,9 +1,6 @@
 [
   {
-    "title": "My First Blog Post",
-    "date": "2025-06-26",
-    "thumbnail": "/uploads/test.png",
-    "body": "\n# Welcome to my blog\n\nThis is my first blog post created with Decap CMS!\n\n## Getting Started\n\nHere's some content to test the setup.",
+    "body": "<!-- test-post.md -->\n---\ntitle: \"My First Blog Post\"\ndate: \"2025-06-26\"\nthumbnail: \"/uploads/test.png\"\n---\n\n# Welcome to my blog\n\nThis is my first blog post created with Decap CMS!\n\n## Getting Started\n\nHere's some content to test the setup.",
     "slug": "test-post"
   }
 ]
