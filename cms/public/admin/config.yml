@@ -1,19 +1,6 @@
 backend:
   name: git-gateway
   branch: main
-  repo: DHananjayyy/ng-cms  # Replace with your actual GitHub username/repo
-  base_url: https://api.netlify.com
-
-# Add local backend for local development
-local_backend:
-  url: http://localhost:8081/api/v1
-
-# Add your site URL
-site_url: https://transcendent-crepe-d2ef5f.netlify.app/
-display_url: https://transcendent-crepe-d2ef5f.netlify.app/
-
-# Editorial workflow adds a draft/review process
-publish_mode: editorial_workflow
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
